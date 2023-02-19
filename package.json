@@ -1,7 +1,7 @@
 {
   "name": "react-editor-toolbar",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "./dist/react-editor-toolbar.umd.js",
   "module": "./dist/react-editor-toolbar.es.js",
@@ -27,8 +27,7 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "exports": {
     ".": {
       "import": "./dist/react-editor-toolbar.es.js",
