@@ -1,0 +1,87 @@
+{
+  "name": "react-editor-toolbar",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/react-editor-toolbar.umd.js",
+  "module": "./dist/react-editor-toolbar.es.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint --fix 'src/**/*.{jsx,ts,tsx}' && prettier --write src//**/*.{ts,tsx,css} --config ./.prettierrc",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "yarn  eslint",
+      "yarn  format"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/react-editor-toolbar.es.js",
+      "require": "./dist/react-editor-toolbar.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hooks": "^1.0.1",
+    "tailwindcss": "^3.2.7",
+    "typescript": "*",
+    "vite": "^4.1.0",
+    "vite-plugin-dts": "^1.4.1",
+    "vite-plugin-linter": "^1.2.0",
+    "vite-tsconfig-paths": "^3.5.0"
+  },
+  "peerDependencies": {
+    "react": "16.8.0 || >=17.x",
+    "react-dom": "16.8.0 || >=17.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Delavalom/react-editor-toolbar"
+  },
+  "keywords": [],
+  "author": "Luis Arvelo",
+  "bugs": {
+    "url": "https://github.com/Delavalom/react-editor-toolbar/issues"
+  },
+  "homepage": "https://github.com/Delavalom/react-editor-toolbar#readme",
+  "license": "MIT"
+}
