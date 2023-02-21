@@ -20,14 +20,20 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "yarn  eslint",
-      "yarn  format"
+      "pnpm lint"
     ]
   },
   "files": [
     "dist"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@tiptap/core": ">=2.0.0-beta.209 <3.0.0",
+    "@tiptap/extension-bubble-menu": "2.0.0-beta.218",
+    "@tiptap/pm": "2.0.0-beta.218",
+    "@tiptap/react": "2.0.0-beta.218",
+    "@tiptap/starter-kit": "2.0.0-beta.218",
+    "@tiptap/suggestion": "2.0.0-beta.218"
+  },
   "exports": {
     ".": {
       "import": "./dist/react-editor-toolbar.es.js",
